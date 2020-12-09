@@ -11,3 +11,52 @@
     import 'relative/path/to/stylesheet.scss';
 
 */
+#app {
+    height: 100vh;
+}
+.super {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+.badge {
+    width: auto;
+    padding: 1rem 0.5rem;
+    font-size: 5rem;
+    background-color: darkslategray;
+    border: 5px black solid;
+    border-radius: 1rem;
+}
+.cell {
+    width: 10rem;
+    height: 10rem;
+    border: 2.5px lightgray solid;
+}
+.board {
+    width: 30rem;
+}
+input {
+    max-width: 312px;
+}
+.b-row {
+    &-0 {
+        border-top: none;
+    }
+    &-2 {
+        border-bottom: none;
+    }
+}
+
+.b-col {
+    &-0 {
+        border-left: none;
+    }
+    &-2 {
+        border-right: none;
+    }
+}
+.clickable {
+    cursor: pointer;
+    &:hover {
+        background-color: transparentize($color: #fff, $amount: 0.9);;
+    }
+}
