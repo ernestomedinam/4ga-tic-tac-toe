@@ -3,6 +3,7 @@ import React, { useState } from "react";
 //include images into your bundle
 import rigoImage from "../../img/rigo-baby.jpg";
 import { Board } from "./Board";
+import { Player } from "./Player";
 
 //create your first component
 export function Home() {
@@ -24,56 +25,16 @@ export function Home() {
 							{"Choose your side!"}
 						</h2>
 						<div className="row justify-content-center pt-5">
-							<div className="col-3 d-flex flex-column align-items-center">
-								<input
-									className="form-control mb-3 super"
-									type="text"
-									value={
-										players.find(
-											player => player.suit == "x"
-										).name
-									}
-									onChange={e =>
-										setPlayers(
-											players.map(player => {
-												if (player.suit == "x") {
-													player.name =
-														e.target.value;
-												}
-												return player;
-											})
-										)
-									}
-								/>
-								<div className="badge">
-									<p className="mb-2">{"✖"}</p>
-								</div>
-							</div>
-							<div className="col-3 d-flex flex-column align-items-center">
-								<input
-									className="form-control mb-3 super"
-									type="text"
-									value={
-										players.find(
-											player => player.suit == "o"
-										).name
-									}
-									onChange={e =>
-										setPlayers(
-											players.map(player => {
-												if (player.suit == "o") {
-													player.name =
-														e.target.value;
-												}
-												return player;
-											})
-										)
-									}
-								/>
-								<div className="badge">
-									<p className="mb-2">{"⭕"}</p>
-								</div>
-							</div>
+							{players.map(player => {
+								return (
+									<Player
+										key={player.suit}
+										suit={player.suit}
+										players={players}
+										setPlayers={setPlayers}
+									/>
+								);
+							})}
 						</div>
 						<div className="row justify-content-center mt-5">
 							<button
