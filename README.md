@@ -1,8 +1,12 @@
-# Hello World with React boilerplate
+# Hello tic tac toe with React boilerplate
 <p>
   <a href="https://gitpod.io#https://github.com/4GeeksAcademy/react-hello.git"><img src="https://raw.githubusercontent.com/4GeeksAcademy/react-hello/master/open-in-gitpod.svg?sanitize=true" />
   </a>
 </p>
+
+
+## Tic tac toe project
+Completes 4GA [tic tac toe project](https://projects.breatheco.de/d/tictactoe-react#readme).
 
 This template is similar to create-react-app but it's meant for 4Geeks Academy students.
 
